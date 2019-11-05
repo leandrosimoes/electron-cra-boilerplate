@@ -24,10 +24,17 @@
     }
   },
   "dependencies": {
-    "electron-is-dev": "^1.0.1",
+    "axios": "^0.19.0",
+    "electron-is-dev": "^1.1.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "reactotron-core-client": "^2.8.8",
+    "reactotron-react-js": "^3.3.6",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.4.1"
   },
   "homepage": "./",
   "main": "public/electron.js",
@@ -36,7 +43,7 @@
     "build": "rescripts build",
     "test": "rescripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "postinstall": "electron-builder install-app-deps",
     "preelectron-pack": "yarn build",
     "electron-pack": "build -mw"
@@ -51,12 +58,23 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@rescripts/cli": "^0.0.10",
-    "@rescripts/rescript-env": "^0.0.5",
-    "concurrently": "^4.1.0",
-    "electron": "^4.0.6",
-    "electron-builder": "^20.38.5",
-    "typescript": "^3.3.3333",
-    "wait-on": "^3.2.0"
+    "@rescripts/cli": "^0.0.13",
+    "@rescripts/rescript-env": "^0.0.11",
+    "concurrently": "^5.0.0",
+    "electron": "^7.1.0",
+    "electron-builder": "^22.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "prettier": "^1.18.2",
+    "reactotron-redux": "^3.1.2",
+    "typescript": "^3.6.4",
+    "wait-on": "^3.3.0"
   }
 }
