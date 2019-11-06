@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
+const electron = window.require('electron').remote
+const win = electron.getCurrentWindow()
+
+const handleCloseButtonPress = () => {
+    if (win) win.close()
+}
+
 class App extends Component {
     render() {
         return (
@@ -14,6 +21,7 @@ class App extends Component {
                     <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
                         Learn React
                     </a>
+                    <button className='close-button' onClick={handleCloseButtonPress}>Close using electron instance</button>
                 </header>
             </div>
         )

@@ -23,6 +23,19 @@
     color: #61dafb;
 }
 
+button.close-button {
+    margin-top: 10px;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+button.close-button:hover {
+    background-color: #3890a9;
+}
+
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
