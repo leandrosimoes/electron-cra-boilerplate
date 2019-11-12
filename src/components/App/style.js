@@ -6,8 +6,9 @@ const Wrapper = styled.div`
     display: flex;
     flex: 1;
     background-color: ${Theme.backgroundColor};
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    padding: 10px;
 `
 
 const Main = styled.div`

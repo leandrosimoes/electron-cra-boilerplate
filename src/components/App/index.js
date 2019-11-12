@@ -1,5 +1,7 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 
+import store from '../../store'
 import { Wrapper, Main, CloseButton, Title } from './style'
 
 const electron = window.require('electron').remote
@@ -11,12 +13,14 @@ const handleCloseButtonPress = () => {
 
 const App = () => {
     return (
-        <Wrapper>
-            <Main>
-                <Title>Welcome the ReactJS Electron App</Title>
-                <CloseButton className='close-button' onClick={handleCloseButtonPress}>Close using electron instance</CloseButton>
-            </Main>
-        </Wrapper>
+        <Provider store={store}>
+            <Wrapper>
+                <Main>
+                    <Title>Welcome the ReactJS Electron App</Title>
+                    <CloseButton className='close-button' onClick={handleCloseButtonPress}>Close using electron instance</CloseButton>
+                </Main>
+            </Wrapper>
+        </Provider>
     )
 }
 
