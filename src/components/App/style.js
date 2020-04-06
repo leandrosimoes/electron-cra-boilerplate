@@ -9,14 +9,19 @@ const Wrapper = styled.div`
     width: calc(100vw - 20px);
     height: calc(100vh - 20px);
     padding: 10px;
+    align-items: center;
+    justify-content: center;
 `
 
 const Main = styled.div`
-    justify-self: center;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 const CloseButton = styled.button`
+    width: 300px;
     margin-top: 10px;
     background-color: ${Theme.primaryButtonColor};
     border: none;
